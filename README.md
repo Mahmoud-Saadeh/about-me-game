@@ -4,6 +4,9 @@ I made this website to talk about me in a guessing game form, I added 5 yes/no q
 
 This website is a project to practice what we learned from Code Fellows lectures.
 
+30/March/2021:
+added 6th and 7th questions to implement what we learned about loops and conditions in a fun guessing game.
+
 LICENSE IS MIT License.
 
 - How did this go, overall?
