@@ -125,17 +125,31 @@ let books = [
   "the gambler",
 ];
 let right = 0;
-for (let v = books.length; v > 0; v--) {
+
+for (let v = books.length; v >= 0; v--) {
   right = 1;
-  if (v < 6) {
-    userArrayAns = prompt(`Your guess is wrong, try again, ${v} trys left`);
+  if (v < 6 && v > 0) {
+    userArrayAns = prompt(`Your guess is wrong, try again`);
     userArrayAnsLower = userArrayAns.toLowerCase();
   }
+
   for (let i = 0; i < books.length; i++) {
     if (userArrayAnsLower === books[i]) {
       alert(`You guessed right, I read ${books}`);
       right++;
       correctAnswer++;
+      break;
+    }
+  }
+
+  for (let i = 0; i < books.length; i++) {
+    if (userArrayAnsLower !== books[i] && right === 1 && v - 1 > 0) {
+      alert(`Your guess is wrong, ${v - 1} trys left`);
+      break;
+    } else if (v - 1 === 0) {
+      alert(`You lost, I read ${books}`);
+      console.log(v);
+      right = 0;
       break;
     }
   }
@@ -151,30 +165,3 @@ alert(
     correctAnswer +
     " questions correctly from 7, I hope you had fun"
 );
-// if (chancesArr !== 6) {
-//   userArrayAns = prompt(`Guess again, you have ${chancesArr} trys left`);
-//   userArrayAnsLower = userArrayAns.toLowerCase();
-// }
-
-// if (books.indexOf(userArrayAnsLower) !== -1) {
-//   alert(
-//     "You guessed right, I read crime and punishment, the brothers karamazov, and demons"
-//   );
-//   correctAnswer++;
-//   chancesArr--;
-//   break;
-// } else if (chancesArr === 1) {
-//   alert(
-//     "you lost, The correct answers were crime and punishment, the brothers karamazov, and demons"
-//   );
-// } else if (books.indexOf(userArrayAnsLower) === -1) {
-//   chancesArr--;
-//   alert(`Your guess is wrong, you have ${chancesArr} trys left`);
-// }
-// else if (userArrayAnsLower !== books[i] && wrong === 0 && right === 0) {
-
-//   alert(`You guess is wrong, try again, ${v} trys left`);
-//   chancesArr--;
-//   wrong = 1;
-//   break;
-// }
