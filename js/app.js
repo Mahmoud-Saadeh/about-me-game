@@ -146,7 +146,7 @@ for (let v = books.length; v >= 0; v--) {
     if (userArrayAnsLower !== books[i] && right === 1 && v - 1 > 0) {
       alert(`Your guess is wrong, ${v - 1} trys left`);
       break;
-    } else if (v - 1 === 0) {
+    } else if (v - 1 === 0 && right !== 2) {
       alert(`You lost, I read ${books}`);
       console.log(v);
       right = 0;
