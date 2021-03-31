@@ -4,8 +4,11 @@ I made this website to talk about me in a guessing game form, I added 5 yes/no q
 
 This website is a project to practice what we learned from Code Fellows lectures.
 
-30/March/2021:
+31/March/2021:
 added 6th and 7th questions to implement what we learned about loops and conditions in a fun guessing game.
+
+###  Mahmoud Abdallah Saadeh was Navigator
+###  Nazmih Husien Ibreash was Driver
 
 LICENSE IS MIT License.
 
@@ -20,3 +23,4 @@ LICENSE IS MIT License.
 - How long did it take you to complete this assignment? And, before you started, how long did you think it would take you to complete this assignment?
 
   - About 1 hour and a half, I thought I will do it in less than an hour
+

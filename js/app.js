@@ -204,6 +204,7 @@ function guessBook() {
         right++;
         correctAnswer++;
         break;
+        
       }
     }
 
