@@ -186,6 +186,7 @@ let books = [
 ];
 let right = 0;
 
+function guessBook() {
   userArrayAns = prompt(
     "I read 6 from Dostoevsky's books can you guess any of them?"
   );
@@ -222,9 +223,9 @@ let right = 0;
       break;
     }
   }
+}
 
-
-
+guessBook();
 
 
 
