@@ -1,4 +1,5 @@
 'use strict';
+
 let userName = prompt('What is your name?');
 let correctAnswer = 0;
 // console.log("Hello " +userName +" welcome to this guessing game, I hope you will have fun");
@@ -8,20 +9,34 @@ alert(
     ' welcome to this guessing game, I hope you will have fun'
 );
 
-let myAge = prompt('Am I 22 years old?');
-let myAgeLower = myAge.toLowerCase();
 
-if (myAgeLower === 'yes' || myAgeLower === 'y') {
-  alert('yes my age is 22');
-  correctAnswer += 1;
-  //   console.log("yes my age is 22");
-} else if (myAgeLower === 'no' || myAgeLower === 'n') {
-  alert('Wrong, I am 22 years old');
-  //   console.log("Wrong, I am 22 years old");
-} else {
-  alert('Please answer with yes/no or y/n');
-  //   console.log("Please answer with yes/no or y/n");
+//Q1
+
+let myAge='';
+let myAgeLower='';
+
+
+function myAge() {
+
+  myAge = prompt('Am I 22 years old?');
+  myAgeLower = myAge.toLowerCase();
+  if (myAgeLower === 'yes' || myAgeLower === 'y') {
+    alert('yes my age is 22');
+    correctAnswer += 1;
+    //   console.log("yes my age is 22");
+  } else if (myAgeLower === 'no' || myAgeLower === 'n') {
+    alert('Wrong, I am 22 years old');
+    //   console.log("Wrong, I am 22 years old");
+  } else {
+    alert('Please answer with yes/no or y/n');
+    //   console.log("Please answer with yes/no or y/n");
+  }
 }
+myAge();
+ 
+ 
+
+
 
 let myName = prompt('Is my name Mahmoud?');
 let myNameLower = myName.toLowerCase();
