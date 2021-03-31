@@ -61,20 +61,30 @@ function myName() {
 
 myName();
 
-let myAbility = prompt('Can i do 500 push ups ?');
-let myAbilityLower = myAbility.toLowerCase();
+//Q3
 
-if (myAbilityLower === 'yes' || myAbilityLower === 'y') {
-  alert("Wrong answer, unfortunately I can't");
-  //   console.log("Wrong answer, unfortunately I can't");
-} else if (myAbilityLower === 'no' || myAbilityLower === 'n') {
-  alert('Yes I can not, unfortunately');
-  correctAnswer += 1;
-  //   console.log("Yes I can not, unfortunately");
-} else {
-  alert('Please answer with yes/no or y/n');
-  //   console.log("Please answer with yes/no or y/n");
+let myAbility ='';
+let myAbilityLower='';
+
+function myAbility() {
+  myAbility = prompt('Can i do 500 push ups ?');
+  myAbilityLower = myAbility.toLowerCase();
+
+  if (myAbilityLower === 'yes' || myAbilityLower === 'y') {
+    alert("Wrong answer, unfortunately I can't");
+    //   console.log("Wrong answer, unfortunately I can't");
+  } else if (myAbilityLower === 'no' || myAbilityLower === 'n') {
+    alert('Yes I can not, unfortunately');
+    correctAnswer += 1;
+    //   console.log("Yes I can not, unfortunately");
+  } else {
+    alert('Please answer with yes/no or y/n');
+    //   console.log("Please answer with yes/no or y/n");
+  }
 }
+
+myAbility();
+
 
 let myHome = prompt('Do I live in Al-Zarqa ?');
 let myHomeLower = myHome.toLowerCase();
