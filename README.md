@@ -11,12 +11,12 @@ LICENSE IS MIT License.
 
 - How did this go, overall?
 
-* Everything went smoothly, I learned a lot.
+  - Everything went smoothly, I learned a lot.
 
 - What observations or questions do you have about what you’ve learned so far?
 
-* I do not have any questions.
+  - I do not have any questions.
 
 - How long did it take you to complete this assignment? And, before you started, how long did you think it would take you to complete this assignment?
 
-* About 1 hour and a half, I thought I will do it in less than an hour
+  - About 1 hour and a half, I thought I will do it in less than an hour
