@@ -16,7 +16,7 @@ let myAge = '';
 let myAgeLower = '';
 
 
-function myAge() {
+function Age() {
 
   myAge = prompt('Am I 22 years old?');
   myAgeLower = myAge.toLowerCase();
@@ -32,14 +32,14 @@ function myAge() {
     //   console.log("Please answer with yes/no or y/n");
   }
 }
-myAge();
+Age();
 
 
 ////////////////Q2
 let myName = '';
 let myNameLower = '';
 
-function myName() {
+function Name() {
   myName = prompt('Is my name Mahmoud?');
   myNameLower = myName.toLowerCase();
 
@@ -56,14 +56,14 @@ function myName() {
   }
 }
 
-myName();
+Name();
 
 //////////////Q3
 
-let myAbility ='';
-let myAbilityLower='';
+let myAbility = '';
+let myAbilityLower = '';
 
-function myAbility() {
+function Ability() {
   myAbility = prompt('Can i do 500 push ups ?');
   myAbilityLower = myAbility.toLowerCase();
 
@@ -80,15 +80,15 @@ function myAbility() {
   }
 }
 
-myAbility();
+Ability();
 
 
 ///////////////Q4
 
-let myHome ='';
+let myHome = '';
 let myHomeLower = '';
 
-function myHome() {
+function Home() {
   myHome = prompt('Do I live in Al-Zarqa ?');
   myHomeLower = myHome.toLowerCase();
 
@@ -105,16 +105,16 @@ function myHome() {
   }
 }
 
-myHome();
+Home();
 
 
 ///////////////Q5
 
 
-let myTall ='';
+let myTall = '';
 let myTallLower = '';
 
-function myTall() {
+function Tall() {
   myTall = prompt('Am I 173 cm tall?');
   myTallLower = myTall.toLowerCase();
 
@@ -130,41 +130,50 @@ function myTall() {
     //   console.log("Please answer with yes/no or y/n");
   }
 }
-myTall();
+Tall();
 
 
+////////////////Q6
 
-let userNum = prompt('Guess a number between 1 and 10');
-let num = Number(userNum);
+let userNum = '';
+let num = 0;
 let chances = 4;
 let randomNum = Math.floor(Math.random() * 10) + 1;
-for (let i = 0; i < 4; i++) {
-  if (chances !== 4) {
-    num = Number(prompt('Guess a number between 1 and 10'));
-  }
 
-  if (num === randomNum) {
-    alert('You guessed right, I picked ' + randomNum);
-    correctAnswer++;
-    chances--;
-    break;
-  } else if (chances === 1) {
-    alert('you lost, The correct answer was ' + randomNum);
-  } else if (num > randomNum) {
-    chances--;
-    alert(`Your guess is high, you have ${chances} trys left`);
-  } else if (num < randomNum) {
-    chances--;
-    alert(`Your guess is low, you have ${chances} trys left`);
-  } else {
-    chances--;
-    alert(`Please enter a number, you have ${chances} trys left`);
+function guessNum() {
+  userNum = prompt('Guess a number between 1 and 10');
+  num = Number(userNum);
+
+  for (let i = 0; i < 4; i++) {
+    if (chances !== 4) {
+      num = Number(prompt('Guess a number between 1 and 10'));
+    }
+
+    if (num === randomNum) {
+      alert('You guessed right, I picked ' + randomNum);
+      correctAnswer++;
+      chances--;
+      break;
+    } else if (chances === 1) {
+      alert('you lost, The correct answer was ' + randomNum);
+    } else if (num > randomNum) {
+      chances--;
+      alert(`Your guess is high, you have ${chances} trys left`);
+    } else if (num < randomNum) {
+      chances--;
+      alert(`Your guess is low, you have ${chances} trys left`);
+    } else {
+      chances--;
+      alert(`Please enter a number, you have ${chances} trys left`);
+    }
   }
 }
+guessNum();
 
-let userArrayAns = prompt(
-  "I read 6 from Dostoevsky's books can you guess any of them?"
-);
+
+//////////////Q7
+
+let userArrayAns = '';
 let userArrayAnsLower = userArrayAns.toLowerCase();
 let chancesArr = 6;
 let books = [
@@ -177,38 +186,48 @@ let books = [
 ];
 let right = 0;
 
-for (let v = books.length; v >= 0; v--) {
-  right = 1;
-  if (v < 6 && v > 0) {
-    userArrayAns = prompt(`Your guess is wrong, try again`);
-    userArrayAnsLower = userArrayAns.toLowerCase();
-  }
+  userArrayAns = prompt(
+    "I read 6 from Dostoevsky's books can you guess any of them?"
+  );
 
-  for (let i = 0; i < books.length; i++) {
-    if (userArrayAnsLower === books[i]) {
-      alert(`You guessed right, I read ${books}`);
-      right++;
-      correctAnswer++;
+  for (let v = books.length; v >= 0; v--) {
+    right = 1;
+    if (v < 6 && v > 0) {
+      userArrayAns = prompt(`Your guess is wrong, try again`);
+      userArrayAnsLower = userArrayAns.toLowerCase();
+    }
+
+    for (let i = 0; i < books.length; i++) {
+      if (userArrayAnsLower === books[i]) {
+        alert(`You guessed right, I read ${books}`);
+        right++;
+        correctAnswer++;
+        break;
+      }
+    }
+
+    for (let i = 0; i < books.length; i++) {
+      if (userArrayAnsLower !== books[i] && right === 1 && v - 1 > 0) {
+        alert(`Your guess is wrong, ${v - 1} trys left`);
+        break;
+      } else if (v - 1 === 0 && right !== 2) {
+        alert(`You lost, I read ${books}`);
+        console.log(v);
+        right = 0;
+        break;
+      }
+    }
+
+    if (right === 2) {
       break;
     }
   }
 
-  for (let i = 0; i < books.length; i++) {
-    if (userArrayAnsLower !== books[i] && right === 1 && v - 1 > 0) {
-      alert(`Your guess is wrong, ${v - 1} trys left`);
-      break;
-    } else if (v - 1 === 0 && right !== 2) {
-      alert(`You lost, I read ${books}`);
-      console.log(v);
-      right = 0;
-      break;
-    }
-  }
 
-  if (right === 2) {
-    break;
-  }
-}
+
+
+
+
 
 alert(
   userName +
