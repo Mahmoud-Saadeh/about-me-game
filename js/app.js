@@ -5,15 +5,15 @@ let correctAnswer = 0;
 // console.log("Hello " +userName +" welcome to this guessing game, I hope you will have fun");
 alert(
   'Hello ' +
-    userName +
-    ' welcome to this guessing game, I hope you will have fun'
+  userName +
+  ' welcome to this guessing game, I hope you will have fun'
 );
 
 
 //Q1
 
-let myAge='';
-let myAgeLower='';
+let myAge = '';
+let myAgeLower = '';
 
 
 function myAge() {
@@ -33,25 +33,33 @@ function myAge() {
   }
 }
 myAge();
- 
- 
 
 
 
-let myName = prompt('Is my name Mahmoud?');
-let myNameLower = myName.toLowerCase();
 
-if (myNameLower === 'yes' || myNameLower === 'y') {
-  alert('yes my name is Mahmoud');
-  correctAnswer += 1;
-  //   console.log("yes my name is Mahmoud");
-} else if (myAgeLower === 'no' || myAgeLower === 'n') {
-  alert('Wrong, this is me');
-  //   console.log("Wrong, this is me");
-} else {
-  alert('Please answer with yes/no or y/n');
-  //   console.log("Please answer with yes/no or y/n");
+
+//Q2
+let myName = '';
+let myNameLower = '';
+
+function myName() {
+  myName = prompt('Is my name Mahmoud?');
+  myNameLower = myName.toLowerCase();
+
+  if (myNameLower === 'yes' || myNameLower === 'y') {
+    alert('yes my name is Mahmoud');
+    correctAnswer += 1;
+    //   console.log("yes my name is Mahmoud");
+  } else if (myAgeLower === 'no' || myAgeLower === 'n') {
+    alert('Wrong, this is me');
+    //   console.log("Wrong, this is me");
+  } else {
+    alert('Please answer with yes/no or y/n');
+    //   console.log("Please answer with yes/no or y/n");
+  }
 }
+
+myName();
 
 let myAbility = prompt('Can i do 500 push ups ?');
 let myAbilityLower = myAbility.toLowerCase();
@@ -176,7 +184,7 @@ for (let v = books.length; v >= 0; v--) {
 
 alert(
   userName +
-    ' answered ' +
-    correctAnswer +
-    ' questions correctly from 7, I hope you had fun'
+  ' answered ' +
+  correctAnswer +
+  ' questions correctly from 7, I hope you had fun'
 );
