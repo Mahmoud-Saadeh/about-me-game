@@ -86,20 +86,31 @@ function myAbility() {
 myAbility();
 
 
-let myHome = prompt('Do I live in Al-Zarqa ?');
-let myHomeLower = myHome.toLowerCase();
+//Q4
 
-if (myHomeLower === 'yes' || myHomeLower === 'y') {
-  alert('Wrong answer, I live in Amman');
-  //   console.log("Wrong answer, I live in Amman");
-} else if (myHomeLower === 'no' || myHomeLower === 'n') {
-  alert("Yes I don't live in Al-Zarqa I live in Amman");
-  correctAnswer += 1;
-  //   console.log("Yes I don't live in Al-Zarqa I live in Amman");
-} else {
-  alert('Please answer with yes/no or y/n');
-  //   console.log("Please answer with yes/no or y/n");
+
+let myHome ='';
+let myHomeLower = '';
+
+function myHome() {
+  myHome = prompt('Do I live in Al-Zarqa ?');
+  myHomeLower = myHome.toLowerCase();
+
+  if (myHomeLower === 'yes' || myHomeLower === 'y') {
+    alert('Wrong answer, I live in Amman');
+    //   console.log("Wrong answer, I live in Amman");
+  } else if (myHomeLower === 'no' || myHomeLower === 'n') {
+    alert("Yes I don't live in Al-Zarqa I live in Amman");
+    correctAnswer += 1;
+    //   console.log("Yes I don't live in Al-Zarqa I live in Amman");
+  } else {
+    alert('Please answer with yes/no or y/n');
+    //   console.log("Please answer with yes/no or y/n");
+  }
 }
+
+myHome();
+
 
 let myTall = prompt('Am I 173 cm tall?');
 let myTallLower = myTall.toLowerCase();
