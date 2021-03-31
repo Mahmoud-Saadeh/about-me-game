@@ -10,7 +10,7 @@ alert(
 );
 
 
-//Q1
+/////////////Q1
 
 let myAge = '';
 let myAgeLower = '';
@@ -35,10 +35,7 @@ function myAge() {
 myAge();
 
 
-
-
-
-//Q2
+////////////////Q2
 let myName = '';
 let myNameLower = '';
 
@@ -61,7 +58,7 @@ function myName() {
 
 myName();
 
-//Q3
+//////////////Q3
 
 let myAbility ='';
 let myAbilityLower='';
@@ -86,8 +83,7 @@ function myAbility() {
 myAbility();
 
 
-//Q4
-
+///////////////Q4
 
 let myHome ='';
 let myHomeLower = '';
@@ -112,20 +108,31 @@ function myHome() {
 myHome();
 
 
-let myTall = prompt('Am I 173 cm tall?');
-let myTallLower = myTall.toLowerCase();
+///////////////Q5
 
-if (myTallLower === 'yes' || myTallLower === 'y') {
-  alert('yes I am 173 cm tall');
-  correctAnswer += 1;
-  //   console.log("yes I am 173 cm tall");
-} else if (myTallLower === 'no' || myTallLower === 'n') {
-  // console.log("Wrong, I am 173 cm tall");
-  alert('Wrong, I am 173 cm tall');
-} else {
-  alert('Please answer with yes/no or y/n');
-  //   console.log("Please answer with yes/no or y/n");
+
+let myTall ='';
+let myTallLower = '';
+
+function myTall() {
+  myTall = prompt('Am I 173 cm tall?');
+  myTallLower = myTall.toLowerCase();
+
+  if (myTallLower === 'yes' || myTallLower === 'y') {
+    alert('yes I am 173 cm tall');
+    correctAnswer += 1;
+    //   console.log("yes I am 173 cm tall");
+  } else if (myTallLower === 'no' || myTallLower === 'n') {
+    // console.log("Wrong, I am 173 cm tall");
+    alert('Wrong, I am 173 cm tall');
+  } else {
+    alert('Please answer with yes/no or y/n');
+    //   console.log("Please answer with yes/no or y/n");
+  }
 }
+myTall();
+
+
 
 let userNum = prompt('Guess a number between 1 and 10');
 let num = Number(userNum);
