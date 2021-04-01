@@ -2,38 +2,30 @@
 
 let userName = prompt('What is your name?');
 let correctAnswer = 0;
-// console.log("Hello " +userName +" welcome to this guessing game, I hope you will have fun");
 alert(
   'Hello ' +
-  userName +
-  ' welcome to this guessing game, I hope you will have fun'
+    userName +
+    ' welcome to this guessing game, I hope you will have fun'
 );
-
 
 /////////////Q1
 
 let myAge = '';
 let myAgeLower = '';
 
-
 function Age() {
-
   myAge = prompt('Am I 22 years old?');
   myAgeLower = myAge.toLowerCase();
   if (myAgeLower === 'yes' || myAgeLower === 'y') {
     alert('yes my age is 22');
     correctAnswer += 1;
-    //   console.log("yes my age is 22");
   } else if (myAgeLower === 'no' || myAgeLower === 'n') {
     alert('Wrong, I am 22 years old');
-    //   console.log("Wrong, I am 22 years old");
   } else {
     alert('Please answer with yes/no or y/n');
-    //   console.log("Please answer with yes/no or y/n");
   }
 }
 Age();
-
 
 ////////////////Q2
 let myName = '';
@@ -46,13 +38,10 @@ function Name() {
   if (myNameLower === 'yes' || myNameLower === 'y') {
     alert('yes my name is Mahmoud');
     correctAnswer += 1;
-    //   console.log("yes my name is Mahmoud");
   } else if (myAgeLower === 'no' || myAgeLower === 'n') {
     alert('Wrong, this is me');
-    //   console.log("Wrong, this is me");
   } else {
     alert('Please answer with yes/no or y/n');
-    //   console.log("Please answer with yes/no or y/n");
   }
 }
 
@@ -69,19 +58,15 @@ function Ability() {
 
   if (myAbilityLower === 'yes' || myAbilityLower === 'y') {
     alert("Wrong answer, unfortunately I can't");
-    //   console.log("Wrong answer, unfortunately I can't");
   } else if (myAbilityLower === 'no' || myAbilityLower === 'n') {
     alert('Yes I can not, unfortunately');
     correctAnswer += 1;
-    //   console.log("Yes I can not, unfortunately");
   } else {
     alert('Please answer with yes/no or y/n');
-    //   console.log("Please answer with yes/no or y/n");
   }
 }
 
 Ability();
-
 
 ///////////////Q4
 
@@ -94,22 +79,17 @@ function Home() {
 
   if (myHomeLower === 'yes' || myHomeLower === 'y') {
     alert('Wrong answer, I live in Amman');
-    //   console.log("Wrong answer, I live in Amman");
   } else if (myHomeLower === 'no' || myHomeLower === 'n') {
     alert("Yes I don't live in Al-Zarqa I live in Amman");
     correctAnswer += 1;
-    //   console.log("Yes I don't live in Al-Zarqa I live in Amman");
   } else {
     alert('Please answer with yes/no or y/n');
-    //   console.log("Please answer with yes/no or y/n");
   }
 }
 
 Home();
 
-
 ///////////////Q5
-
 
 let myTall = '';
 let myTallLower = '';
@@ -121,17 +101,13 @@ function Tall() {
   if (myTallLower === 'yes' || myTallLower === 'y') {
     alert('yes I am 173 cm tall');
     correctAnswer += 1;
-    //   console.log("yes I am 173 cm tall");
   } else if (myTallLower === 'no' || myTallLower === 'n') {
-    // console.log("Wrong, I am 173 cm tall");
     alert('Wrong, I am 173 cm tall');
   } else {
     alert('Please answer with yes/no or y/n');
-    //   console.log("Please answer with yes/no or y/n");
   }
 }
 Tall();
-
 
 ////////////////Q6
 
@@ -170,7 +146,6 @@ function guessNum() {
 }
 guessNum();
 
-
 //////////////Q7
 
 let userArrayAns = '';
@@ -204,7 +179,6 @@ function guessBook() {
         right++;
         correctAnswer++;
         break;
-        
       }
     }
 
@@ -228,12 +202,9 @@ function guessBook() {
 
 guessBook();
 
-
-
-
 alert(
   userName +
-  ' answered ' +
-  correctAnswer +
-  ' questions correctly from 7, I hope you had fun'
+    ' answered ' +
+    correctAnswer +
+    ' questions correctly from 7, I hope you had fun'
 );
